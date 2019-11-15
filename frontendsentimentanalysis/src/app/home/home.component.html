@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<div class="homepage" [@routerTransition]>
+  <div class="searchBox">
+<!--    <h4>Sentiment Analysis</h4>-->
+    <form  #search="ngForm" (ngSubmit)="searchKeyword(search)">
+      <input type="text" [(ngModel)]="searchQuery"  name="searchQuery" placeholder="Enter Text to Analyze">
+      <button type="submit">Analyze</button>
+<!--      <input routerLink="/analysis" type="submit" name="analyze" value="Analyze">-->
+    </form>
+  </div>
+</div>
